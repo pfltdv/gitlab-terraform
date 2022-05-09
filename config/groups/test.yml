@@ -1,0 +1,13 @@
+---
+
+path: "test"
+description: "Test Group"
+autoDevOps: false
+emailsDisabled: false
+lfsEnabled: true
+mentionsDisabled: false
+parent: null
+requestAccessEnabled: true
+visibilityLevel: "internal"
+
+...
