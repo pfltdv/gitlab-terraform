@@ -1,2 +1,2 @@
-# pulumi-org-sync
-Organisation Sync for Gitlab &amp; Github
+# Gitlab Terraform test
+
