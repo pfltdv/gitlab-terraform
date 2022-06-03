@@ -1,4 +1,0 @@
-name: org-sync
-runtime: 
-  name: go
-description: Syncronize organisation with Github/Gitlab/etc.

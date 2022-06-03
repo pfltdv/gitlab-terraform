@@ -1,0 +1,22 @@
+users:
+  - username: "ops1"
+    email: "ops1@email.com"
+    name: "Ops One"
+    state: "active"
+    flags:
+      - CanCreateGroup
+      - IsAdmin
+  - username: "ops2"
+    email: "ops2@email.com"
+    name: "Ops Two Super User"
+    state: "active"
+    flags:
+      - CanCreateGroup
+  - username: "ops3"
+    email: "ops3@email.com"
+    name: "Regular Ops User"
+    state: "active"
+  - username: "ops4"
+    email: "ops4@email.com"
+    name: "Blocked User"
+    state: "blocked" 

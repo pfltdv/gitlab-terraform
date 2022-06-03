@@ -1,0 +1,29 @@
+---
+name: "pipelines"
+description: "Common pipelines library"
+group: "CI Pipelines"
+archived: false
+ci_forward_deployment_enabled: true
+default_branch: "main"
+container_registry_enabled: true
+container_registry_access_level: "enabled"
+forking_access_level: disabled
+initialize_with_readme: true
+issues_access_level: "enabled"
+issues_enabled: true
+merge_method: "ff"
+merge_requests_enabled: true
+only_allow_merge_if_all_discussions_are_resolved: true
+only_allow_merge_if_pipeline_succeeds: true
+pipelines_enabled: true
+squash_option: "always"
+environments:
+  - "release-6.5"
+  - "release-6.6"
+  - "release-6.7"
+  - "release-7.0"
+  
+...
+
+# TODO: gitlab_project_approval_rule
+

@@ -1,0 +1,15 @@
+---
+
+groups:
+- name: "CI Pipelines"
+  path: "cis"
+  description: "CI Pipeline Group"
+  branchProtection: 2
+  projectCreationLevel: "maintainer"
+  subgroupCreationLevel: "maintainer"
+  visibilityLevel: "internal"
+  flags:
+  - LfsEnabled
+  - RequestAccessEnabled
+  
+...

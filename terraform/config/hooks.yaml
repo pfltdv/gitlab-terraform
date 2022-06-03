@@ -1,0 +1,12 @@
+---
+
+- name: "sample_token"
+  url: "https://localhost:9090"
+  token: "secret-token"
+  push_events: true
+  tag_push_events: true
+  merge_requests_events: true
+  repository_update_events: true
+  enable_ssl_verification: true
+  
+...

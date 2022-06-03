@@ -1,0 +1,17 @@
+---
+
+- name: "var1"
+  key: "instance_variable_key"
+  value: "secret1secret1"
+  protected: true
+  masked: true
+  variable_type: "env_var"
+
+- name: "var2"
+  key: "instance_variable_file"
+  value: "secret1secret2"
+  protected: true
+  masked: true
+  variable_type: "file"
+
+...

@@ -1,0 +1,51 @@
+---
+
+- name: "CI Pipelines"
+  path: "ci"
+  description: "Group contains pipelines of public projects"
+  auto_devops_enabled: false
+  default_branch_protection: 0
+  emails_disabled: true
+  lfs_enabled: true
+  mentions_disabled: false
+  prevent_forking_outside_group: false
+  project_creation_level: "maintainer"
+  request_access_enabled: false
+  require_two_factor_authentication: false
+  share_with_group_lock: true
+  subgroup_creation_level: "owner"
+  visibility_level: "private"
+  vars:
+  - name: "var3"
+    key: "instance_variable_file"
+    value: "secret1secret2"
+    protected: true
+    masked: true
+    variable_type: "file"
+    environment_scope: "*"
+
+- name: "CI Mirrors"
+  path: "ci-only"
+  description: "Group contains mirrors of public projects"
+  auto_devops_enabled: false
+  default_branch_protection: 0
+  emails_disabled: true
+  lfs_enabled: true
+  mentions_disabled: false
+  prevent_forking_outside_group: false
+  project_creation_level: "maintainer"
+  request_access_enabled: false
+  require_two_factor_authentication: false
+  share_with_group_lock: true
+  subgroup_creation_level: "owner"
+  visibility_level: "private"
+  vars:
+    - name: "var1"
+      key: "instance_variable_file"
+      value: "secret1secret2"
+      protected: true
+      masked: true
+      variable_type: "env_var"
+      environment_scope: "*"
+      
+...

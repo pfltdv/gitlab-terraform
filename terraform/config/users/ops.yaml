@@ -1,0 +1,38 @@
+---
+
+- name: "Mustafa Kara"
+  username: "mustafa.kara"
+  email: "mustafa.kara@email.com"
+  is_admin: false
+  projects_limit: 100
+  can_create_group: false
+  is_external: false
+  reset_password: true
+  skip_confirmation: true
+  state: active
+  groups:
+    - name: "CI Pipelines"
+      level: "maintainer"
+    - name: "CI Mirrors"
+      level: "maintainer"
+  projects: []
+
+- name: "Mustafa Kara"
+  username: "mustafa2.kara"
+  email: "mustafa.kara2@email.com"
+  is_admin: false
+  projects_limit: 100
+  can_create_group: false
+  is_external: false
+  reset_password: true
+  skip_confirmation: true
+  state: deactivated
+  groups:
+  - name: "CI Pipelines"
+    level: "maintainer"
+  - name: "CI Mirrors"
+    level: "maintainer"
+  projects: []
+  
+
+...

@@ -1,6 +1,0 @@
-encryptionsalt: v1:P/m6fhMqLcw=:v1:b4uAmB1Dz8KK7f+f:snXEeflmaKng9GiGdsj5ZeF1W4zrvQ==
-config:
-  gitlab:token: QWw3Up5eypuvbjweY7zZ
-  gitlab:base_url: http://localhost/api/v4/
-  proj:config: config
-  

@@ -1,0 +1,19 @@
+---
+
+- name: "Mustafa Kara"
+  username: "qa_1"
+  email: "qa_1@email.com"
+  is_admin: false
+  projects_limit: 0
+  can_create_group: false
+  is_external: false
+  reset_password: true
+  skip_confirmation: true
+  state: blocked
+  groups: []
+  projects: 
+    - name: "pipelines"
+      group: "CI Pipelines"
+      level: "reporter"
+  
+...
