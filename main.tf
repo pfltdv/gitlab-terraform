@@ -148,3 +148,17 @@ resource "gitlab_project_membership" "project_membership" {
   access_level = each.value.level
 }
 
+
+resource "gitlab_repository_file" "repository_file" {
+  for_each = {
+    for pt in local.project_templates : "${pt.group}_${pt.project}_${pt.template.src}" => pt
+  }
+  depends_on     = [gitlab_group.group, gitlab_project.project]
+  project        = gitlab_project.project["${each.value.project}@${each.value.group}"].id
+  file_path      = each.value.template.dst
+  branch         = each.value.template.branch
+  content        = templatefile("templates/${each.value.template.src}", each.value)
+  author_email   = var.gitlab_commit_author_email
+  author_name    = var.gitlab_commit_author_name
+  commit_message = "feature: add ${each.value.template.dst}"
+}

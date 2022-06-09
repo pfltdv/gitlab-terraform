@@ -67,6 +67,19 @@ locals {
     ]
   ])
 
+  project_templates = flatten([
+    for p in local.projects : [
+      for t in p.templates : {
+        project     = p.name
+        group       = p.group
+        template    = t
+        description = p.description
+        year        = p.year
+        owner       = var.owner
+      }
+    ]
+  ])
+
 }
 
 variable "gitlab_token" {
@@ -86,5 +99,35 @@ variable "gitlab_url" {
   validation {
     condition     = length(var.gitlab_url) > 4 && substr(var.gitlab_url, 0, 4) == "http"
     error_message = "The gitlab_url must be gitlab url. Please provate gitlab base url!"
+  }
+}
+
+variable "gitlab_commit_author_name" {
+  description = "Git commit author name"
+  sensitive   = true
+  type        = string
+  validation {
+    condition     = length(var.gitlab_commit_author_name) > 0
+    error_message = "The gitlab_commit_author_name value must be provided!"
+  }
+}
+
+variable "gitlab_commit_author_email" {
+  description = "Git commit author email"
+  sensitive   = true
+  type        = string
+  validation {
+    condition     = length(var.gitlab_commit_author_email) > 0
+    error_message = "The gitlab_commit_author_email value must be provided!"
+  }
+}
+
+variable "owner" {
+  description = "Owner of the repositories"
+  sensitive   = true
+  type        = string
+  validation {
+    condition     = length(var.owner) > 0
+    error_message = "The owner value must be provided!"
   }
 }

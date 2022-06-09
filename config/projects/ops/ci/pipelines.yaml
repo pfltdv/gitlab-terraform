@@ -1,6 +1,7 @@
 ---
 name: "pipelines"
 description: "Common pipelines library"
+year: 2022
 group: "CI Pipelines"
 archived: false
 ci_forward_deployment_enabled: true
@@ -22,7 +23,18 @@ environments:
   - "release-6.6"
   - "release-6.7"
   - "release-7.0"
-  
+templates:
+  - src: LICENSE.txt
+    branch: main
+    dst: LICENSE.txt
+  - src: makefiles/simple.mk
+    branch: main
+    dst: Makefile
+  - src: pipelines/dummy.yml
+    branch: main
+    dst: .gitlab-ci.yml
+
+
 ...
 
 
